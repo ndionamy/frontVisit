@@ -4,8 +4,8 @@ import {FaTachometerAlt, FaUsers, FaBuilding, FaCogs, FaChartBar, FaUser} from '
 
 const AdminSidebar = () => {
   return (
-    <div className='fixed top-0 bottom-0 left-0 w-64 h-screen space-y-2 text-white bg-gray-700'>
-      <div className='flex items-center justify-center h-12 bg-blue-600'>
+    <div className='fixed top-0 bottom-0 left-0 w-64 h-screen space-y-2 text-white bg-gray-600'>
+      <div className='flex items-center justify-center h-12 bg-gradient-to-r from-[#01377D] to-green-800'>
         <h3 className='text-center tect-2xl font-pacific'>IVISIT</h3>
       </div>
       <div>

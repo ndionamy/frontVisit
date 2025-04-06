@@ -14,6 +14,7 @@ const AdminDashboard = () => {
   />
   <div className='flex-1 h-screen ml-64 bg-gray-100'> 
   <Navbar/>
+  
   <Outlet/>
   </div>
 </div>

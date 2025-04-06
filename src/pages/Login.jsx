@@ -25,7 +25,7 @@ const Login = () => {
                 if(response.data.user.role === "admin"){
                     navigate('/admin-dashboard')
                 } else {
-                    navigate("/agent-dashboard")
+                    navigate("/acceuil")
                 }
             }
 
@@ -42,20 +42,22 @@ const Login = () => {
 
     }
   return (
+    //     className='flex flex-col items-center h-screen justify-center 
+    // bg-gradient-to-b from-[#01377D] from-20% to-gray-100 to-50% space-y-6'>
     <div
     className='flex flex-col items-center h-screen justify-center 
-    bg-gradient-to-b from-blue-600 from-50% to-gray-100 to-50% space-y-6'>
-         <h2 className='font-sevillana text-3xl text-white'>IVisit Management System
+    bg-gradient-to-b from-[#01377D] from-30% to-10% space-y-6'>
+         <h2 className='text-3xl text-white font-sevillana'>IVisit Management System
 
          </h2>
-         <div className='border shadow p-6 w-80 bg-white'>
-         <h2 className='text-2xl font-bold mb-4'>Se connecter</h2>
+         <div className='p-6 bg-white shadow w-80'>
+         <h2 className='mb-4 text-2xl font-bold'>Se connecter</h2>
          {error && <p className='text-red-500'>{error}</p>}
         <form onSubmit={handleSubmit}>
             <div className='mb-4'>
                 <label htmlFor='email' className='block text-gray-700'>Email</label>
                 <input type='email'
-                className='w-full px-3 py-2 border'
+                className='w-full px-3 py-2 border rounded'
                 placeholder='Entrer votre email'
                 onChange={(e) =>setEmail(e.target.value)}
                 required
@@ -66,13 +68,13 @@ const Login = () => {
                 >Password</label>
                 <input 
                 type='password'
-               className='w-full px-3 py-2 border'
+               className='w-full px-3 py-2 border rounded'
                 placeholder='********'
                 onChange={(e) =>setPassword(e.target.value)}
                 required
 />
             </div>
-            <div className='mb-4 flex items-center justify-between'>
+            <div className='flex items-center justify-between mb-4'>
                 <label className='inline-flex items-center'>
                     <input type='checkbox' className='form-checkbox' />
                     <span className='ml-2 text-gray-700'>Remember me</span>
@@ -85,7 +87,7 @@ const Login = () => {
             <div className='mb-4'>
             <button
             type='submit'
-            className='w-full bg-blue-600 text-white border'>
+            className='w-20 h-10 bg-[#01377D] rounded text-white'>
                 Login</button>
             </div>
         </form>

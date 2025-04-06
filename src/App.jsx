@@ -2,7 +2,6 @@ import {BrowserRouter,Routes, Route, Navigate} from "react-router-dom";
 import Login from "./pages/Login";
 import AdminDashboard from "./pages/AdminDashboard"
 import './App.css';
-import AgentDashboard from "./pages/AgentDashboard";
 import PrivateRoutes from "./utils/PrivateRoutes";
 import RoleBaseRoutes from "./utils/RoleBaseRoutes";
 import AdminSummary from "./components/dashboard/AdminSummary";
@@ -14,6 +13,10 @@ import AddAgence from "./components/agences/AddAgence";
 import EditAgence from "./components/agences/EditAgence";
 import  View  from "./components/agents/View";
 import Edit from "./components/agents/Edit";
+import ButtonAcc from "./components/visiteurs/ButtonAcc";
+import AddVi from "./components/visiteurs/AddVi";
+import Accueil from "./pages/Acceuil";
+
 
 
 function App() {
@@ -42,12 +45,18 @@ function App() {
           <Route path="/admin-dashboard/agent/edit/:id" element = {<Edit/>}></Route>
 
           <Route path="/admin-dashboard/visiteurs" element = {<VisiteursList/>}></Route>
+        </Route>
 
+
+      <Route path="/acceuil" element={ 
+            <Accueil />
+        }>
+          <Route index element = {<ButtonAcc/>}></Route>
+          <Route path="/acceuil" element = {<Accueil/>}></Route>
+          <Route path="/acceuil/add-visiteur" element={<AddVi/>}></Route>
+          <Route path="/acceuil/visiteur-attente" element={<AddVi/>}></Route>
 
         </Route>
-      <Route path="/agent-dashboard" element={<AgentDashboard />}></Route>
-
-
 
     </Routes>
     </BrowserRouter>
